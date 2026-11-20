@@ -15,7 +15,7 @@ if (typeof basketDialog.showModal === "function") {
       document.getElementById("basketDialogDetails").textContent = `${basket.people} personas · Entrega ${basket.delivery.toLocaleLowerCase("es")}`;
       document.getElementById("basketDialogContents").textContent = basket.contents;
       document.getElementById("basketIllustrations").innerHTML = basket.illustrations.map(([image, label]) =>
-        `<figure><img src="assets/${image}" alt="" loading="lazy"><figcaption>${label}</figcaption></figure>`
+        `<figure><img src="assets/${image}" alt="" width="${image === "catalogo/tomate.jpg" ? 217 : 512}" height="${image === "catalogo/tomate.jpg" ? 118 : 341}" loading="lazy"><figcaption>${label}</figcaption></figure>`
       ).join("");
       basketDialog.showModal();
       basketDialog.scrollTop = 0;

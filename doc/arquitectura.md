@@ -16,6 +16,8 @@ Se conservan Tailwind por CDN y fuentes externas de las maquetas; requieren cone
 
 En Productores, la historia de la cooperativa se presenta como una recreación narrativa con una imagen ilustrativa; los detalles del encuentro son imaginados. Si los diálogos no están disponibles, el botón despliega una síntesis de la historia.
 
+Las cabeceras, cestas y escenas de los cuatro oficios utilizan imágenes generadas e ilustrativas, no fotografías de personas, explotaciones ni cestas reales. Las cestas representan ejemplos de su contenido, que puede variar según la temporada; en la cesta Familia se ilustra la opción de queso. Los retratos optimizados se comparten entre las tarjetas y los diálogos de Productores.
+
 Para publicar esta integración de revisión, el [flujo de GitHub Actions](../.github/workflows/pages.yml) despliega únicamente `web/` en GitHub Pages desde `master`. La activación y verificación se describen en el [README](../README.md#publicación-en-github-pages). Esto no determina la arquitectura de producción ni añade tramitación real.
 
 ## Qué tendrá que resolver

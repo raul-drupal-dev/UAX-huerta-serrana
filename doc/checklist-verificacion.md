@@ -24,7 +24,11 @@ La lista puede utilizarse durante el desarrollo sin ejecutar todos los puntos en
 
 ## Observaciones y evidencias
 
-Anotar por identificador la aplicabilidad confirmada, la fecha, las páginas o elementos revisados, el resultado, las evidencias y, cuando corresponda, la acción pendiente o el motivo de no aplicabilidad. Todavía no se ha registrado ninguna verificación.
+Anotar por identificador la aplicabilidad confirmada, la fecha, las páginas o elementos revisados, el resultado, las evidencias y, cuando corresponda, la acción pendiente o el motivo de no aplicabilidad.
+
+- **Revisión parcial de imágenes — 20/11/2026:** en las siete páginas de `web/`, una comprobación en navegador a 360, 768 y 1280 px encontró atributos `alt`, `width` y `height` en las imágenes presentes en el DOM y ninguna imagen cargada rota; se comprobó también la apertura de los diálogos de productores y de la cesta Despensa. Los fondos de las siete cabeceras tienen descripciones accesibles. Queda pendiente la revisión completa de V03 y de contraste sobre las imágenes.
+- **V07 — revisión parcial, 20/11/2026:** el ancho del documento no superó el de la ventana en las siete páginas a 360, 768 y 1280 px; la tabla de cestas tiene desplazamiento horizontal propio. Pendiente completar la revisión responsive integral.
+- **V08–V09 — revisión parcial, 20/11/2026:** en navegador a 360 px, con caché desactivada, servidor local y desplazamiento hasta el final para cargar imágenes diferidas, se midieron entre 843 KB y 1,80 MB transferidos y entre 13 y 27 peticiones por página. Ninguna página alcanzó el objetivo orientativo de 500 KB y cuatro superaron 15 peticiones. El pie de página PNG existente pesa 588 KB por sí solo; también influyen imágenes, estilos y recursos externos. Pendiente estudiar la optimización integral sin modificar las imágenes de producto y repetir las mediciones en el entorno de publicación.
 
 - **V12 — No aplica:** según la indicación del profesor comunicada por el equipo, este criterio no se tendrá en cuenta y se permite usar CSS externo. Se conserva la redacción original para referencia. Los recursos de terceros deben revisarse desde el punto de vista de la privacidad.
 - **V15 — No aplica:** no se tendrá en cuenta el criterio original de historial y mínimo de 15 commits. Se propone contar con al menos un commit; ese mínimo no está confirmado como requisito del profesor.
