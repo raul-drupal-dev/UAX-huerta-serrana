@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es" class="pagina-inicio">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Huerta Serrana S. Coop. Productos de temporada de cuatro productores de la Sierra Norte de Madrid.">
+  <meta name="theme-color" content="#2F5D3A">
+  <title>Huerta Serrana S. Coop. — De la huerta a tu mesa</title>
+
+  <!-- Tailwind CSS: CDN para esta maqueta. Para producción, compilar Tailwind localmente (ver README). -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        sierra: '#2F5D3A', crema: '#FAF6EC', tierra: '#B5532A', tinta: '#1F2A22',
+        arena: '#E8E2D2', miel: '#F2B134', musgo: '#8A8F86'
+      }}}
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/general.css">
+</head>
+<body class="bg-crema text-tinta">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <svg class="icon-definitions" aria-hidden="true" focusable="false">
+    <symbol id="icon-sprout" viewBox="0 0 48 36">
+      <path d="M24 32V18M24 24C15 24 11 18 11 10c8 0 13 4 13 14ZM24 19c0-8 5-13 13-13 0 8-4 14-13 15Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <!-- CABECERA: mantener la identidad verde y la navegación principal. En la siguiente fase, enlazar cada item con su página. -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Huerta Serrana, inicio">
+        <svg class="brand-mark" viewBox="0 0 84 62" aria-hidden="true">
+          <path d="M42 7c-8 0-13-5-13-5 1 10 6 15 13 15S54 12 55 2c0 0-5 5-13 5Z" fill="currentColor"/>
+          <path d="M42 19v8M8 43c12-12 24-12 34-3 10-9 22-9 34 3M13 52c10-6 20-6 29 0 9-6 19-6 29 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M23 35c7-7 13-8 19-4 6-4 12-3 19 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-type"><strong>Huerta<br>Serrana</strong><small>S. Coop.</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a class="active" href="index.html" aria-current="page">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="cestas.html">Cestas</a>
+        <a href="productores.html">Productores</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-trigger" type="button" id="cartOpen" aria-label="Abrir carrito">
+          <svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg><span class="cart-trigger-label">Mi carrito</span>
+          <b id="cartCount" class="cart-count">0</b>
+        </button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil" hidden>
+      <a href="index.html" aria-current="page">Inicio</a><a href="catalogo.html">Catálogo</a><a href="cestas.html">Cestas</a><a href="productores.html">Productores</a><a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO: conservar titular oficial y CTA. La imagen es provisional y se podrá sustituir por fotografía aprobada. -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Cooperativa de la Sierra Norte de Madrid</p>
+        <h1 id="hero-title">De la huerta<br>a tu mesa en<br>menos de <em>48 horas</em></h1>
+        <p class="hero-lead">Productos frescos de nuestra sierra,<br class="desktop-only"> con el sello de cuatro productores locales.</p>
+        <a class="button button-green" href="productores.html#cooperativa">Descubrir la cooperativa <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Cajón de verduras frescas en una huerta de la Sierra Norte"></div>
+    </section>
+
+    <!-- CÓMO FUNCIONA: banda de fondo a todo el ancho; el contenido interior conserva el ancho de lectura. Iconos propios: brote, cesta y reparto. -->
+    <section class="how-section" aria-labelledby="how-title">
+      <div class="how-inner">
+        <div class="section-heading compact"><span></span><h2 id="how-title">¿Cómo funciona?</h2><span></span></div>
+        <ol class="steps">
+          <li>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 39V22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M24 27C12 27 8 19 8 10c10 0 16 5 16 17ZM24 23C24 12 31 7 41 7c0 10-5 17-17 18Z" fill="currentColor"/></svg></span>
+            <p><strong>1. Descubre</strong><br>nuestros productos</p>
+          </li>
+          <li class="step-arrow" aria-hidden="true">→</li>
+          <li>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 19h32l-3 22H11L8 19Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M16 19c0-7 3-11 8-11s8 4 8 11M16 25v10M24 25v10M32 25v10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M8 27h32" stroke="currentColor" stroke-width="2.5"/></svg></span>
+            <p><strong>2. Elige tu cesta</strong><br>o productos</p>
+          </li>
+          <li class="step-arrow" aria-hidden="true">→</li>
+          <li>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 13h24v21H5zM29 20h8l7 8v6H29z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M34 22v7h9M11 34a4 4 0 1 0 8 0M34 34a4 4 0 1 0 8 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M10 19h13M10 25h9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+            <p><strong>3. Consulta el reparto</strong><br>en Madrid y la sierra</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="basket-section section-wrap botanical botanical-basket" id="cestas" aria-labelledby="basket-title">
+      <div class="section-intro">
+        <h2 id="basket-title">Nuestras cestas</h2>
+        <p>Tres opciones para que elijas la que mejor se adapta a ti.</p>
+        <p>Selección de demostración: no se tramitan pedidos ni suscripciones.</p>
+        <a class="button button-terra" href="cestas.html">Comparar cestas <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="basket-grid">
+        <article class="basket-card"><img src="assets/home/cesta-clasica.jpg" alt="" loading="lazy"><div><h3>Cesta Pareja</h3><p>1-2 personas · 38 € / mes</p><a class="basket-detail-link" href="cestas.html#pareja" data-basket="C1">Ver detalles <span class="sr-only">de Cesta Pareja</span> →</a></div></article>
+        <article class="basket-card"><img src="assets/home/cesta-familiar.jpg" alt="" loading="lazy"><div><h3>Cesta Familia</h3><p>3-4 personas · 62 € / mes</p><a class="basket-detail-link" href="cestas.html#familia" data-basket="C2">Ver detalles <span class="sr-only">de Cesta Familia</span> →</a></div></article>
+        <article class="basket-card"><img src="assets/catalogo/mermelada-higo.jpg" alt="" loading="lazy"><div><h3>Cesta Despensa</h3><p>2-4 personas · 45 € / mes</p><a class="basket-detail-link" href="cestas.html#despensa" data-basket="C3">Ver detalles <span class="sr-only">de Cesta Despensa</span> →</a></div></article>
+      </div>
+    </section>
+
+    <dialog class="basket-dialog" id="basketDialog" aria-labelledby="basketDialogTitle" aria-describedby="basketDialogContents">
+      <div class="basket-dialog-header"><h2 id="basketDialogTitle"></h2><button class="basket-dialog-close" type="button" aria-label="Cerrar detalles">×</button></div>
+      <p class="basket-dialog-price" id="basketDialogPrice"></p>
+      <p id="basketDialogDetails"></p>
+      <h3>¿Qué incluye?</h3>
+      <p id="basketDialogContents"></p>
+      <h3>Una muestra de productos</h3>
+      <div class="basket-illustrations" id="basketIllustrations"></div>
+      <button class="button button-green" id="addBasket" type="button">Añadir al carrito de prueba</button>
+    </dialog>
+
+    <!-- AVISO DE TEMPORADA: conectar a la disponibilidad/temporada real; ocultar o editar cuando no haya aviso vigente. -->
+    <aside class="season-banner" aria-label="Información de temporada">
+      <span class="season-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="7" y="10" width="34" height="31" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 6v8M33 6v8M7 19h34M15 26h3M23 26h3M31 26h3M15 33h3M23 33h3M31 33h3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
+      <div><h2>Temporada actual</h2><p>Consulta nuestros productos de temporada y planifica tu pedido.</p></div>
+      <a class="button button-outline" href="catalogo.html">Ver productos de temporada <span aria-hidden="true">→</span></a>
+    </aside>
+
+    <!-- PRODUCTOS DESTACADOS: selección de productos del CSV con las imágenes ilustrativas del catálogo. -->
+    <section class="featured-section" id="productos" aria-labelledby="featured-title">
+      <div class="featured-inner">
+      <div class="section-heading"><span></span><h2 id="featured-title">Nuestros productos destacados</h2><span></span></div>
+      <div class="product-row">
+        <article class="product-card"><img src="assets/catalogo/tomate.jpg" alt="Tomate rosa de la sierra" loading="lazy"><div><h3>Tomate rosa de la sierra</h3><p class="featured-price">3,90 € / kg</p><p class="season-tag"><span aria-hidden="true">✦</span> Verano</p></div></article>
+        <article class="product-card"><img src="assets/catalogo/manzana-reineta.jpg" alt="Manzana reineta" loading="lazy"><div><h3>Manzana reineta</h3><p class="featured-price">2,60 € / kg</p><p class="season-tag"><span aria-hidden="true">✦</span> Otoño</p></div></article>
+        <article class="product-card"><img src="assets/catalogo/yogur-oveja.jpg" alt="Yogur natural de oveja" loading="lazy"><div><h3>Yogur natural de oveja</h3><p class="featured-price">2,10 € / unidad</p><p class="season-tag"><span aria-hidden="true">✦</span> Todo el año</p></div></article>
+        <article class="product-card"><img src="assets/catalogo/miel-romero.jpg" alt="Miel de romero" loading="lazy"><div><h3>Miel de romero</h3><p class="featured-price">7,50 € / bote 500 g</p><p class="season-tag"><span aria-hidden="true">✦</span> Primavera</p></div></article>
+        <article class="product-card"><img src="assets/catalogo/pan-centeno.jpg" alt="Pan de centeno de masa madre" loading="lazy"><div><h3>Pan de centeno de masa madre</h3><p class="featured-price">3,40 € / hogaza</p><p class="season-tag"><span aria-hidden="true">✦</span> Todo el año</p></div></article>
+      </div>
+      <div class="catalog-cta"><a class="button button-terra" href="catalogo.html">Ver catálogo completo <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 48 36" focusable="false">
+        <path d="M24 32V18M24 24C15 24 11 18 11 10c8 0 13 4 13 14ZM24 19c0-8 5-13 13-13 0 8-4 14-13 15Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span></span>
+    </div>
+
+    <!-- PRODUCTORES: cuatro fichas teaser. Sustituir nombres, localidades e imágenes por los datos y retratos reales. Cada tarjeta enlazará a su ficha interior. -->
+    <div class="final-section">
+      <section class="producer-section section-wrap botanical botanical-producers" id="productores" aria-labelledby="producer-title">
+        <div class="section-intro producer-intro">
+          <h2 id="producer-title">Nuestros<br> productores</h2>
+          <p>Cuatro familias, una cooperativa para llevar lo mejor de la sierra a tu mesa.</p>
+          <a class="button button-green" href="productores.html">Conocer a nuestros productores <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="producer-grid">
+          <a class="producer-card" href="productores.html#productores"><img src="assets/home/productor-1.jpg" alt="Productor trabajando en la huerta" loading="lazy"><div><h3>Huerto Los Álamos</h3><p>Buitrago del Lozoya</p></div></a>
+          <a class="producer-card" href="productores.html#productores"><img src="assets/home/productor-2.jpg" alt="Productora con una cosecha de verduras" loading="lazy"><div><h3>Quesería La Peña</h3><p>Lozoyuela</p></div></a>
+          <a class="producer-card" href="productores.html#productores"><img src="assets/home/productor-3.jpg" alt="Productor mostrando verduras recién cosechadas" loading="lazy"><div><h3>Apiarios del Jarama</h3><p>El Atazar</p></div></a>
+          <a class="producer-card" href="productores.html#productores"><img src="assets/home/productor-4.jpg" alt="Productora en un cultivo de la sierra" loading="lazy"><div><h3>Horno de Piedra</h3><p>Torrelaguna</p></div></a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER: completar con textos legales definitivos, política de privacidad y enlaces sociales oficiales. -->
+  <footer class="site-footer" id="contacto">
+    <div class="footer-landscape" aria-hidden="true">
+      <img src="assets/home/sierra-footer.png" alt="" width="2234" height="368">
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-inner">
+        <a class="brand footer-brand" href="index.html" aria-label="Huerta Serrana, volver al inicio">
+          <svg class="brand-mark" viewBox="0 0 84 62" aria-hidden="true">
+            <path d="M42 7c-8 0-13-5-13-5 1 10 6 15 13 15S54 12 55 2c0 0-5 5-13 5Z" fill="currentColor"/>
+            <path d="M42 19v8M8 43c12-12 24-12 34-3 10-9 22-9 34 3M13 52c10-6 20-6 29 0 9-6 19-6 29 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M23 35c7-7 13-8 19-4 6-4 12-3 19 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-type"><strong>Huerta<br>Serrana</strong><small>S. Coop.</small></span>
+        </a>
+        <div class="footer-links"><a href="#contacto">Aviso legal</a><span>|</span><a href="#contacto">Privacidad</a><span>|</span><a href="contacto.html">Contacto</a></div>
+        <div class="social-links" aria-label="Redes sociales"><a href="#contacto" aria-label="Instagram">◎</a><a href="#contacto" aria-label="Facebook">f</a><a href="#contacto" aria-label="YouTube">▶</a></div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true" inert>
+    <div class="drawer-header"><h2 id="cartTitle"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Tu carrito</h2><button id="cartClose" class="close-button" aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Todavía no has añadido productos.</p></div>
+    <div class="cart-summary">
+      <div class="total-line"><strong>Total estimado</strong><span>—</span></div>
+      <p class="price-disclaimer">El total queda pendiente de concretar impuestos y costes de envío.</p>
+      <a class="button button-green checkout-button" href="pedido.html">Revisar pedido <span>→</span></a>
+      <button class="button button-outline continue-shopping" id="continueShopping">← Seguir comprando</button>
+    </div>
+    <div class="delivery-note"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg><div><strong>Envío en Madrid y sierra</strong><small>Los jueves y sábados</small></div></div>
+    <span class="drawer-leaf" aria-hidden="true"></span>
+  </aside>
+  <script src="assets/js/general.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

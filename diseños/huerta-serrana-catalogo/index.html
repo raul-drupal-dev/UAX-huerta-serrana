@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f5d3a">
+  <meta name="description" content="Catálogo de temporada de Huerta Serrana, cooperativa de productores de la Sierra Norte de Madrid.">
+  <title>Catálogo | Huerta Serrana S. Coop.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      theme: { extend: {
+        colors: {
+          sierra: '#2F5D3A', crema: '#FAF6EC', tierra: '#B5532A', tinta: '#1F2A22',
+          arena: '#E8E2D2', miel: '#F2B134', musgo: '#8A8F86'
+        },
+        screens: {
+          hasta900: { raw: '(max-width: 900px)' },
+          hasta650: { raw: '(max-width: 650px)' }
+        }
+      }}
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-crema text-tinta">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <svg class="icon-definitions" aria-hidden="true" focusable="false">
+    <symbol id="icon-sprout" viewBox="0 0 48 36">
+      <path d="M24 32V18M24 24C15 24 11 18 11 10c8 0 13 4 13 14ZM24 19c0-8 5-13 13-13 0 8-4 14-13 15Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../huerta-serrana-home/index.html#inicio" aria-label="Huerta Serrana, inicio">
+        <svg class="brand-mark" viewBox="0 0 84 62" aria-hidden="true">
+          <path d="M42 7c-8 0-13-5-13-5 1 10 6 15 13 15S54 12 55 2c0 0-5 5-13 5Z" fill="currentColor"/>
+          <path d="M42 19v8M8 43c12-12 24-12 34-3 10-9 22-9 34 3M13 52c10-6 20-6 29 0 9-6 19-6 29 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M23 35c7-7 13-8 19-4 6-4 12-3 19 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-type"><strong>Huerta<br>Serrana</strong><small>S. Coop.</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="../huerta-serrana-home/index.html#inicio">Inicio</a>
+        <a class="active" href="#productos" aria-current="page">Catálogo</a>
+        <a href="../huerta-serrana-home/index.html#productores">Productores</a>
+        <a href="../huerta-serrana-home/index.html#contacto">Contacto y pedido</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-link" type="button" aria-label="Mostrar buscador" id="searchToggle"><span aria-hidden="true">⌕</span></button>
+        <button class="cart-trigger" type="button" id="cartOpen" aria-label="Abrir carrito">
+          <svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg><span class="cart-trigger-label">Mi carrito</span>
+          <b id="cartCount" class="cart-count">0</b>
+        </button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil" hidden>
+      <a href="../huerta-serrana-home/index.html#inicio">Inicio</a><a href="#productos" aria-current="page">Catálogo</a><a href="../huerta-serrana-home/index.html#productores">Productores</a><a href="../huerta-serrana-home/index.html#contacto">Contacto y pedido</a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-copy">
+      <p class="eyebrow">PRODUCTOS DE NUESTRA TIERRA</p>
+      <h1 id="heroTitle">Nuestro catálogo</h1>
+      <p class="hero-lead">Productos frescos, de temporada y de proximidad,<br class="desktop-only"> cultivados por nuestra cooperativa.</p>
+      <a class="button button-green" href="#productos">Descubrir nuestros productos <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="hero-photo" role="img" aria-label="Cesta de verduras frescas de temporada"></div>
+  </section>
+
+  <main id="contenido" class="catalog-layout mx-auto mt-[18px] mb-12 grid w-[min(1160px,calc(100%_-_56px))] grid-cols-[210px_minmax(0,1fr)] items-start gap-[26px] hasta900:w-[calc(100%_-_36px)] hasta900:grid-cols-[190px_minmax(0,1fr)] hasta900:gap-[18px] hasta650:mt-[14px] hasta650:mb-[34px] hasta650:block hasta650:w-[calc(100%_-_30px)]">
+    <!-- FILTROS: conectar posteriormente a los 12 productos reales del CSV. -->
+    <aside class="filters rounded-[20px] bg-[#f3ecd9] px-4 pt-[18px] pb-4 shadow-[0_5px_18px_rgba(71,57,29,.04)]" aria-label="Filtros del catálogo">
+      <div class="filter-heading">
+        <h2>Filtrar productos</h2>
+        <button class="mobile-filter-close" id="filterClose" aria-label="Cerrar filtros">×</button>
+      </div>
+      <div class="filter-group">
+        <h3>Temporada</h3>
+        <label><input type="checkbox" name="season" value="Otoño"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Otoño</label>
+        <label><input type="checkbox" name="season" value="Invierno"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Invierno</label>
+        <label><input type="checkbox" name="season" value="Primavera"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Primavera</label>
+        <label><input type="checkbox" name="season" value="Verano"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Verano</label>
+      </div>
+      <div class="filter-group">
+        <h3>Productor</h3>
+        <label><input type="checkbox" name="producer" value="Productor 1"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Productor 1</label>
+        <label><input type="checkbox" name="producer" value="Productor 2"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Productor 2</label>
+        <label><input type="checkbox" name="producer" value="Productor 3"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Productor 3</label>
+        <label><input type="checkbox" name="producer" value="Productor 4"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Productor 4</label>
+      </div>
+      <div class="filter-group">
+        <h3>Categoría</h3>
+        <label><input type="checkbox" name="category" value="Hortalizas"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Hortalizas</label>
+        <label><input type="checkbox" name="category" value="Frutas"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Frutas</label>
+        <label><input type="checkbox" name="category" value="Verduras de hoja"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Verduras de hoja</label>
+        <label><input type="checkbox" name="category" value="Raíces y tubérculos"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Raíces y tubérculos</label>
+        <label><input type="checkbox" name="category" value="Otros"><svg class="sprout-icon mini-leaf" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Otros</label>
+      </div>
+      <div class="filter-group filter-allergens">
+        <h3>Alérgenos <span class="info" title="Información de alérgenos pendiente de validar">ⓘ</span></h3>
+        <label><input type="checkbox" name="allergen" value="none"> Sin alérgenos declarados</label>
+      </div>
+      <button class="button button-outline clear-filters" id="clearFilters">↻ Limpiar filtros</button>
+    </aside>
+
+    <div class="mobile-filter-backdrop" id="filterBackdrop"></div>
+
+    <section class="products-area" id="productos" aria-label="Listado de productos">
+      <div class="results-bar">
+        <p id="resultsCount">Mostrando 1–6 productos</p>
+        <div class="sort-control">
+          <label for="sortSelect">Ordenar por:</label>
+          <select id="sortSelect">
+            <option value="popular">Más populares</option>
+            <option value="az">Nombre: A–Z</option>
+            <option value="za">Nombre: Z–A</option>
+          </select>
+        </div>
+        <button class="button button-outline mobile-filter-open" id="filterOpen">☷ Filtrar</button>
+      </div>
+
+      <!-- TARJETAS DE PRODUCTO: cada tarjeta debe convertirse en componente reutilizable.
+           Sustituir nombres, productores, temporada, alérgenos, unidades y precios con los CSV.
+           No se han inventado precios: se dejan fuera hasta disponer del dato validado. -->
+      <div class="product-grid grid grid-cols-3 gap-4 hasta900:grid-cols-2 hasta650:gap-[10px]" id="productGrid">
+        <article class="product-card min-w-0 overflow-hidden rounded-xl border border-solid border-[#e6dcc7] bg-[#f8f0df] shadow-[0_2px_4px_rgba(70,54,24,.08)]" data-name="Tomate de la huerta" data-producer="Productor 1" data-category="Hortalizas" data-season="Verano" data-popular="1">
+          <a class="product-image block h-[132px] overflow-hidden bg-[#e7dec9] hasta900:h-[145px] hasta650:h-[112px]" href="#" aria-label="Ver Tomate de la huerta"><img src="assets/tomate.jpg" alt="Tomates maduros"></a>
+          <div class="product-info px-3 pt-[11px] pb-3 hasta650:px-[9px] hasta650:pt-[9px] hasta650:pb-[10px]">
+            <a class="product-title" href="#">Tomate de la huerta</a>
+            <span class="season-tag">✦ Temporada</span>
+            <p class="producer">Productor 1</p>
+            <p class="allergen-note"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Sin alérgenos declarados*</p>
+            <div class="product-actions">
+              <div class="quantity" aria-label="Cantidad">
+                <button type="button" class="qty-minus" aria-label="Reducir cantidad">−</button><output>1</output><button type="button" class="qty-plus" aria-label="Aumentar cantidad">＋</button>
+              </div>
+              <button class="button button-terra add-to-cart" type="button" data-id="tomate">🛒 Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card min-w-0 overflow-hidden rounded-xl border border-solid border-[#e6dcc7] bg-[#f8f0df] shadow-[0_2px_4px_rgba(70,54,24,.08)]" data-name="Lechuga fresca" data-producer="Productor 2" data-category="Verduras de hoja" data-season="Primavera" data-popular="2">
+          <a class="product-image block h-[132px] overflow-hidden bg-[#e7dec9] hasta900:h-[145px] hasta650:h-[112px]" href="#" aria-label="Ver Lechuga fresca"><img src="assets/lechuga.jpg" alt="Lechuga fresca"></a>
+          <div class="product-info px-3 pt-[11px] pb-3 hasta650:px-[9px] hasta650:pt-[9px] hasta650:pb-[10px]">
+            <a class="product-title" href="#">Lechuga fresca</a>
+            <span class="season-tag">✦ Temporada</span>
+            <p class="producer">Productor 2</p>
+            <p class="allergen-note"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Sin alérgenos declarados*</p>
+            <div class="product-actions">
+              <div class="quantity" aria-label="Cantidad">
+                <button type="button" class="qty-minus" aria-label="Reducir cantidad">−</button><output>1</output><button type="button" class="qty-plus" aria-label="Aumentar cantidad">＋</button>
+              </div>
+              <button class="button button-terra add-to-cart" type="button" data-id="lechuga">🛒 Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card min-w-0 overflow-hidden rounded-xl border border-solid border-[#e6dcc7] bg-[#f8f0df] shadow-[0_2px_4px_rgba(70,54,24,.08)]" data-name="Zanahoria" data-producer="Productor 3" data-category="Raíces y tubérculos" data-season="Otoño" data-popular="3">
+          <a class="product-image block h-[132px] overflow-hidden bg-[#e7dec9] hasta900:h-[145px] hasta650:h-[112px]" href="#" aria-label="Ver Zanahoria"><img src="assets/zanahoria.jpg" alt="Zanahorias frescas"></a>
+          <div class="product-info px-3 pt-[11px] pb-3 hasta650:px-[9px] hasta650:pt-[9px] hasta650:pb-[10px]">
+            <a class="product-title" href="#">Zanahoria</a>
+            <span class="season-tag">✦ Temporada</span>
+            <p class="producer">Productor 3</p>
+            <p class="allergen-note"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Sin alérgenos declarados*</p>
+            <div class="product-actions">
+              <div class="quantity" aria-label="Cantidad">
+                <button type="button" class="qty-minus" aria-label="Reducir cantidad">−</button><output>1</output><button type="button" class="qty-plus" aria-label="Aumentar cantidad">＋</button>
+              </div>
+              <button class="button button-terra add-to-cart" type="button" data-id="zanahoria">🛒 Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card min-w-0 overflow-hidden rounded-xl border border-solid border-[#e6dcc7] bg-[#f8f0df] shadow-[0_2px_4px_rgba(70,54,24,.08)]" data-name="Calabacín" data-producer="Productor 4" data-category="Hortalizas" data-season="Verano" data-popular="4">
+          <a class="product-image block h-[132px] overflow-hidden bg-[#e7dec9] hasta900:h-[145px] hasta650:h-[112px]" href="#" aria-label="Ver Calabacín"><img src="assets/calabacin.jpg" alt="Calabacines verdes"></a>
+          <div class="product-info px-3 pt-[11px] pb-3 hasta650:px-[9px] hasta650:pt-[9px] hasta650:pb-[10px]">
+            <a class="product-title" href="#">Calabacín</a>
+            <span class="season-tag">✦ Temporada</span>
+            <p class="producer">Productor 4</p>
+            <p class="allergen-note"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Sin alérgenos declarados*</p>
+            <div class="product-actions">
+              <div class="quantity" aria-label="Cantidad">
+                <button type="button" class="qty-minus" aria-label="Reducir cantidad">−</button><output>1</output><button type="button" class="qty-plus" aria-label="Aumentar cantidad">＋</button>
+              </div>
+              <button class="button button-terra add-to-cart" type="button" data-id="calabacin">🛒 Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card min-w-0 overflow-hidden rounded-xl border border-solid border-[#e6dcc7] bg-[#f8f0df] shadow-[0_2px_4px_rgba(70,54,24,.08)]" data-name="Rábanos" data-producer="Productor 1" data-category="Raíces y tubérculos" data-season="Primavera" data-popular="5">
+          <a class="product-image block h-[132px] overflow-hidden bg-[#e7dec9] hasta900:h-[145px] hasta650:h-[112px]" href="#" aria-label="Ver Rábanos"><img src="assets/rabanos.jpg" alt="Rábanos frescos con hojas"></a>
+          <div class="product-info px-3 pt-[11px] pb-3 hasta650:px-[9px] hasta650:pt-[9px] hasta650:pb-[10px]">
+            <a class="product-title" href="#">Rábanos</a>
+            <span class="season-tag">✦ Temporada</span>
+            <p class="producer">Productor 1</p>
+            <p class="allergen-note"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Sin alérgenos declarados*</p>
+            <div class="product-actions">
+              <div class="quantity" aria-label="Cantidad">
+                <button type="button" class="qty-minus" aria-label="Reducir cantidad">−</button><output>1</output><button type="button" class="qty-plus" aria-label="Aumentar cantidad">＋</button>
+              </div>
+              <button class="button button-terra add-to-cart" type="button" data-id="rabanos">🛒 Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card min-w-0 overflow-hidden rounded-xl border border-solid border-[#e6dcc7] bg-[#f8f0df] shadow-[0_2px_4px_rgba(70,54,24,.08)]" data-name="Pimientos" data-producer="Productor 2" data-category="Hortalizas" data-season="Verano" data-popular="6">
+          <a class="product-image block h-[132px] overflow-hidden bg-[#e7dec9] hasta900:h-[145px] hasta650:h-[112px]" href="#" aria-label="Ver Pimientos"><img src="assets/pimientos.jpg" alt="Pimientos rojos"></a>
+          <div class="product-info px-3 pt-[11px] pb-3 hasta650:px-[9px] hasta650:pt-[9px] hasta650:pb-[10px]">
+            <a class="product-title" href="#">Pimientos</a>
+            <span class="season-tag">✦ Temporada</span>
+            <p class="producer">Productor 2</p>
+            <p class="allergen-note"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Sin alérgenos declarados*</p>
+            <div class="product-actions">
+              <div class="quantity" aria-label="Cantidad">
+                <button type="button" class="qty-minus" aria-label="Reducir cantidad">−</button><output>1</output><button type="button" class="qty-plus" aria-label="Aumentar cantidad">＋</button>
+              </div>
+              <button class="button button-terra add-to-cart" type="button" data-id="pimientos">🛒 Añadir</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <nav class="pagination" aria-label="Paginación del catálogo">
+        <button class="page active" aria-current="page">1</button>
+        <button class="page" type="button" aria-label="Página 2">2</button>
+        <button class="page next" type="button" aria-label="Página siguiente">›</button>
+      </nav>
+      <p class="data-note">*Información de alérgenos y datos comerciales pendientes de validar con los CSV del equipo.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div class="footer-landscape" aria-hidden="true">
+      <img src="../huerta-serrana-home/assets/sierra-footer.png" alt="" width="2234" height="368">
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-inner">
+        <a class="brand footer-brand" href="../huerta-serrana-home/index.html#inicio" aria-label="Huerta Serrana, volver al inicio">
+          <svg class="brand-mark" viewBox="0 0 84 62" aria-hidden="true">
+            <path d="M42 7c-8 0-13-5-13-5 1 10 6 15 13 15S54 12 55 2c0 0-5 5-13 5Z" fill="currentColor"/>
+            <path d="M42 19v8M8 43c12-12 24-12 34-3 10-9 22-9 34 3M13 52c10-6 20-6 29 0 9-6 19-6 29 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M23 35c7-7 13-8 19-4 6-4 12-3 19 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-type"><strong>Huerta<br>Serrana</strong><small>S. Coop.</small></span>
+        </a>
+        <div class="footer-links"><a href="#contacto">Aviso legal</a><span>|</span><a href="#contacto">Privacidad</a><span>|</span><a href="mailto:pedidos@huertaserrana.example">Contacto</a></div>
+        <div class="social-links" aria-label="Redes sociales"><a href="#contacto" aria-label="Instagram">◎</a><a href="#contacto" aria-label="Facebook">f</a><a href="#contacto" aria-label="YouTube">▶</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DRAWER GLOBAL DEL CARRITO: panel lateral superpuesto, abierto/cerrado a voluntad. -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true">
+    <div class="drawer-header"><h2 id="cartTitle"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Tu carrito</h2><button id="cartClose" class="close-button" aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Todavía no has añadido productos.</p></div>
+    <div class="cart-summary">
+      <div class="total-line"><strong>Total estimado</strong><span>—</span></div>
+      <p class="price-disclaimer">El importe se calculará cuando se incorporen los precios validados del catálogo.</p>
+      <a class="button button-green checkout-button" href="../huerta-serrana-pedido/index.html">Revisar pedido <span>→</span></a>
+      <button class="button button-outline continue-shopping" id="continueShopping">← Seguir comprando</button>
+    </div>
+    <div class="delivery-note"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg><div><strong>Envío en Madrid y sierra</strong><small>Los jueves y sábados</small></div></div>
+    <span class="drawer-leaf" aria-hidden="true"></span>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>

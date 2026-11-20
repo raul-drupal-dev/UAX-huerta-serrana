@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f5d3a">
+  <meta name="description" content="Contacto y pedido de Huerta Serrana, cooperativa de la Sierra Norte de Madrid.">
+  <title>Contacto y pedido | Huerta Serrana S. Coop.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../huerta-serrana-catalogo/styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <svg class="icon-definitions" aria-hidden="true" focusable="false">
+    <symbol id="icon-sprout" viewBox="0 0 48 36">
+      <path d="M24 32V18M24 24C15 24 11 18 11 10c8 0 13 4 13 14ZM24 19c0-8 5-13 13-13 0 8-4 14-13 15Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M12 21s-7-7.5-7-13a7 7 0 0 1 14 0c0 5.5-7 13-7 13Z"/><circle cx="12" cy="8" r="2.5"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M5 3 3 5c0 8 8 16 16 16l2-2-4-4-3 2c-3-1-6-4-7-7l2-3-4-4Z"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../huerta-serrana-home/index.html#inicio" aria-label="Huerta Serrana, inicio">
+        <svg class="brand-mark" viewBox="0 0 84 62" aria-hidden="true">
+          <path d="M42 7c-8 0-13-5-13-5 1 10 6 15 13 15S54 12 55 2c0 0-5 5-13 5Z" fill="currentColor"/>
+          <path d="M42 19v8M8 43c12-12 24-12 34-3 10-9 22-9 34 3M13 52c10-6 20-6 29 0 9-6 19-6 29 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M23 35c7-7 13-8 19-4 6-4 12-3 19 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-type"><strong>Huerta<br>Serrana</strong><small>S. Coop.</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="../huerta-serrana-home/index.html#inicio">Inicio</a>
+        <a href="../huerta-serrana-catalogo/index.html#productos">Catálogo</a>
+        <a href="../huerta-serrana-productores/index.html#productores">Productores</a>
+        <a class="active" href="#contenido" aria-current="page">Contacto y pedido</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-link" type="button" aria-label="Mostrar buscador" id="searchToggle"><span aria-hidden="true">⌕</span></button>
+        <button class="cart-trigger" type="button" id="cartOpen" aria-label="Abrir carrito">
+          <svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg><span class="cart-trigger-label">Mi carrito</span>
+          <b id="cartCount" class="cart-count">0</b>
+        </button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil" hidden>
+      <a href="../huerta-serrana-home/index.html#inicio">Inicio</a><a href="../huerta-serrana-catalogo/index.html#productos">Catálogo</a><a href="../huerta-serrana-productores/index.html#productores">Productores</a><a href="#contenido" aria-current="page">Contacto y pedido</a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-copy">
+      <p class="eyebrow">CONTACTA CON NOSOTROS</p>
+      <h1 id="heroTitle">Estamos aquí para ayudarte</h1>
+      <p class="hero-lead">Consultas, pedidos e información<br class="desktop-only"> sobre nuestra cooperativa.</p>
+      <a class="button button-green" href="#formulario">Escríbenos <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="hero-photo" role="img" aria-label="Cesta de verduras frescas de temporada"></div>
+  </section>
+
+  <main id="contenido">
+    <section class="contact-strip" aria-label="Datos de la cooperativa">
+      <div class="contact-strip-inner">
+        <div class="contact-fact"><span class="fact-icon"><svg aria-hidden="true"><use href="#icon-pin"></use></svg></span><div><h2>Zona</h2><p>Sierra Norte de Madrid</p></div></div>
+        <div class="contact-fact"><span class="fact-icon"><svg aria-hidden="true"><use href="#icon-phone"></use></svg></span><div><h2>Teléfono ficticio</h2><p>910 000 000</p></div></div>
+        <div class="contact-fact"><span class="fact-icon"><svg aria-hidden="true"><use href="#icon-mail"></use></svg></span><div><h2>Correo ficticio</h2><p>pedidos@huertaserrana.example</p></div></div>
+        <div class="contact-fact"><span class="fact-icon"><svg aria-hidden="true"><use href="#icon-clock"></use></svg></span><div><h2>Reparto</h2><p>Jueves y sábados</p></div></div>
+      </div>
+    </section>
+
+    <div class="contact-layout">
+      <section class="form-panel" id="formulario" aria-labelledby="form-title">
+        <h2 id="form-title">Envíanos un mensaje</h2>
+        <p>Formulario de demostración: el envío aún no está disponible. No introduzcas datos personales reales.</p>
+        <form id="contactForm" aria-describedby="form-status">
+          <div class="field"><label for="name">Nombre completo <span aria-hidden="true">*</span></label><input id="name" name="nombre" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="email">Correo electrónico <span aria-hidden="true">*</span></label><input id="email" name="correo" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">Teléfono (opcional)</label><input id="phone" name="telefono" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="basket">Cesta (opcional)</label><select id="basket" name="cesta"><option value="">Selecciona una cesta</option><option>Cesta Pareja</option><option>Cesta Familia</option><option>Cesta Despensa</option></select></div>
+          <div class="field"><label for="message">Tu mensaje <span aria-hidden="true">*</span></label><textarea id="message" name="mensaje" rows="4" required></textarea></div>
+          <div class="consent"><input id="consent" name="consentimiento" type="checkbox" required><label for="consent">Acepto la <a href="#privacidad-formulario">información de privacidad</a> <span aria-hidden="true">*</span></label></div>
+          <p class="required-note">* Campos obligatorios</p>
+          <p id="form-status" class="form-status">El formulario no envía ni guarda mensajes; la tramitación está pendiente de definir.</p>
+          <button class="button button-green send-button" type="submit" disabled>Enviar mensaje <span aria-hidden="true">→</span></button>
+        </form>
+        <div class="privacy-note" id="privacidad-formulario">
+          <h3>Información de privacidad</h3>
+          <p>El tratamiento de las solicitudes y la política de privacidad están pendientes de definición y revisión antes de habilitar el formulario.</p>
+        </div>
+      </section>
+
+      <div class="contact-side">
+        <section class="location-panel" aria-labelledby="location-title">
+          <svg class="location-art" viewBox="0 0 300 120" aria-hidden="true" preserveAspectRatio="xMidYMax slice"><path d="M0 94 55 42l35 34 48-57 60 58 34-35 68 52v26H0Z" fill="#b9cc9e"/><path d="M0 106 54 68l51 38 62-48 61 48 32-24 40 24v14H0Z" fill="#8dab7f"/><path d="M0 114c50-25 91 8 146-4s94-20 154 4v6H0Z" fill="#5e875e"/></svg>
+          <div class="location-copy"><span class="fact-icon"><svg aria-hidden="true"><use href="#icon-pin"></use></svg></span><h2 id="location-title">Nuestra zona</h2><p>Sierra Norte de Madrid</p><p>La dirección de la sede está pendiente de confirmar.</p></div>
+        </section>
+        <section class="faq-panel" aria-labelledby="faq-title">
+          <h2 id="faq-title">Preguntas frecuentes</h2>
+          <p>Información sobre la cooperativa y el reparto.</p>
+          <details><summary>¿En qué zonas se reparte?</summary><p>En Madrid capital y municipios de la sierra.</p></details>
+          <details><summary>¿Qué días se realizan los repartos?</summary><p>Los jueves y sábados.</p></details>
+          <details><summary>¿Con qué antelación se solicita un pedido?</summary><p>Con un mínimo de 48 horas de antelación. El mecanismo de solicitud en la web está pendiente de definir.</p></details>
+        </section>
+      </div>
+    </div>
+    <section class="visit-banner" aria-labelledby="visit-title">
+      <svg class="visit-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg>
+      <div><h2 id="visit-title">Una cooperativa con raíces en la sierra</h2><p>Conoce a los cuatro productores que forman Huerta Serrana.</p></div>
+      <a class="button button-outline" href="../huerta-serrana-productores/index.html#productores">Nuestros productores <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div class="footer-landscape" aria-hidden="true">
+      <img src="../huerta-serrana-home/assets/sierra-footer.png" alt="" width="2234" height="368">
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-inner">
+        <a class="brand footer-brand" href="../huerta-serrana-home/index.html#inicio" aria-label="Huerta Serrana, volver al inicio">
+          <svg class="brand-mark" viewBox="0 0 84 62" aria-hidden="true">
+            <path d="M42 7c-8 0-13-5-13-5 1 10 6 15 13 15S54 12 55 2c0 0-5 5-13 5Z" fill="currentColor"/>
+            <path d="M42 19v8M8 43c12-12 24-12 34-3 10-9 22-9 34 3M13 52c10-6 20-6 29 0 9-6 19-6 29 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M23 35c7-7 13-8 19-4 6-4 12-3 19 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-type"><strong>Huerta<br>Serrana</strong><small>S. Coop.</small></span>
+        </a>
+        <div class="footer-links"><a href="#contacto">Aviso legal</a><span>|</span><a href="#contacto">Privacidad</a><span>|</span><a href="mailto:pedidos@huertaserrana.example">Contacto</a></div>
+        <div class="social-links" aria-label="Redes sociales"><a href="#contacto" aria-label="Instagram">◎</a><a href="#contacto" aria-label="Facebook">f</a><a href="#contacto" aria-label="YouTube">▶</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true" inert>
+    <div class="drawer-header"><h2 id="cartTitle"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Tu carrito</h2><button id="cartClose" class="close-button" aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Todavía no has añadido productos.</p></div>
+    <div class="cart-summary">
+      <div class="total-line"><strong>Total estimado</strong><span>—</span></div>
+      <p class="price-disclaimer">El importe se calculará cuando se incorporen los precios validados del catálogo.</p>
+      <a class="button button-green checkout-button" href="../huerta-serrana-pedido/index.html">Revisar pedido <span>→</span></a>
+      <button class="button button-outline continue-shopping" id="continueShopping">← Seguir comprando</button>
+    </div>
+    <div class="delivery-note"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg><div><strong>Envío en Madrid y sierra</strong><small>Los jueves y sábados</small></div></div>
+    <span class="drawer-leaf" aria-hidden="true"></span>
+  </aside>
+  <script src="../huerta-serrana-productores/app.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

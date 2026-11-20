@@ -1,0 +1,13 @@
+id;producto;categoria;precio_eur;unidad;productor;temporada;alergenos
+P01;Tomate rosa de la sierra;Verdura;3,90;kg;Huerto Los Álamos;Verano;—
+P02;Calabaza de invierno;Verdura;1,80;kg;Huerto Los Álamos;Otoño;—
+P03;Judías verdes;Verdura;4,20;kg;Huerto Los Álamos;Verano;—
+P04;Manzana reineta;Fruta;2,60;kg;Huerto Los Álamos;Otoño;—
+P05;Queso curado de cabra;Lácteo;18,50;kg;Quesería La Peña;Todo el año;Leche
+P06;Yogur natural de oveja;Lácteo;2,10;unidad;Quesería La Peña;Todo el año;Leche
+P07;Miel de romero;Despensa;7,50;bote 500 g;Apiarios del Jarama;Primavera;—
+P08;Miel de brezo;Despensa;8,90;bote 500 g;Apiarios del Jarama;Verano;—
+P09;Pan de centeno de masa madre;Panadería;3,40;hogaza;Horno de Piedra;Todo el año;Gluten
+P10;Magdalenas de aceite de oliva;Panadería;3,95;caja 6 uds;Horno de Piedra;Todo el año;Gluten, huevo
+P11;Huevos camperos;Despensa;3,20;docena;Huerto Los Álamos;Todo el año;Huevo
+P12;Mermelada de higo;Despensa;4,80;bote 250 g;Horno de Piedra;Otoño;—

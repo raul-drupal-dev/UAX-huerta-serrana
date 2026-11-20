@@ -1,0 +1,47 @@
+.contact-strip{background:#f3ecd9}
+.contact-strip-inner{width:min(1160px,calc(100% - 56px));margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:28px 0}
+.contact-fact{display:flex;align-items:center;gap:12px;padding:0 20px;border-right:1px solid #d6c9aa;min-width:0}
+.contact-fact:first-child{padding-left:0}.contact-fact:last-child{border:0;padding-right:0}
+.contact-fact h2{font:700 13px var(--sans);margin:0 0 5px}
+.contact-fact p{font-size:12px;line-height:1.4;margin:0;overflow-wrap:anywhere}
+.fact-icon{display:grid;place-items:center;flex:none;width:48px;height:48px;border-radius:50%;background:#e2e8be;color:var(--green)}
+.fact-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact-layout{width:min(1160px,calc(100% - 56px));margin:36px auto;display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:start}
+.form-panel,.faq-panel{border-radius:18px;padding:25px;background:#f8f0df}
+.form-panel{border:1px solid #e6dcc7;box-shadow:0 2px 4px rgba(70,54,24,.08)}
+.form-panel h2,.contact-side h2,.visit-banner h2{font-size:26px;line-height:1.15;margin:0 0 9px}
+.form-panel>p,.faq-panel>p,.visit-banner p{line-height:1.5;margin:0 0 18px}
+.field{display:grid;gap:5px;margin-bottom:12px}
+.field label,.consent label{font-size:13px;font-weight:600}
+.field input,.field select,.field textarea{width:100%;border:1px solid #d9cdb5;border-radius:8px;background:#fdf9f0;color:var(--ink);font:inherit;padding:10px 12px}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible,.faq-panel summary:focus-visible{outline:3px solid #d89a30;outline-offset:3px}
+.consent{display:flex;align-items:flex-start;gap:8px;margin:16px 0 8px}
+.consent input{accent-color:var(--green);margin:3px 0 0}
+.consent a{color:var(--green-dark);text-decoration:underline}
+.required-note,.form-status{font-size:12px;line-height:1.45}
+.form-status{padding:10px 12px;border-left:3px solid var(--green);background:#e9edcf}
+.send-button{width:100%;margin-top:5px}
+.send-button:disabled{opacity:.65;cursor:not-allowed}
+.send-button:disabled:hover{filter:none;transform:none}
+.privacy-note{margin-top:20px;padding-top:16px;border-top:1px solid #dfd4bd}
+.privacy-note h3{font-size:16px;margin:0 0 7px}.privacy-note p{font-size:12px;line-height:1.5;margin:0}
+.contact-side{display:grid;gap:20px}
+.location-panel{position:relative;min-height:250px;overflow:hidden;border-radius:18px;background:#dce9d0}
+.location-art{position:absolute;inset:auto 0 0;width:100%;height:55%}
+.location-copy{position:relative;padding:26px;color:var(--ink)}
+.location-copy .fact-icon{margin-bottom:14px;background:#f3ecd9}
+.location-copy p{margin:5px 0;line-height:1.45}
+.faq-panel{background:var(--sage)}
+.faq-panel>p{margin-bottom:14px}
+.faq-panel details{background:#faf6ec;border-radius:9px;margin-top:8px}
+.faq-panel summary{position:relative;cursor:pointer;list-style:none;padding:12px 40px 12px 14px;font-weight:700;font-size:13px}
+.faq-panel summary::-webkit-details-marker{display:none}
+.faq-panel summary:after{content:"+";position:absolute;right:15px;top:8px;font-size:20px;color:var(--green)}
+.faq-panel details[open] summary:after{content:"\2212"}
+.faq-panel details p{line-height:1.5;padding:0 14px 14px;margin:0}
+.visit-banner{width:min(1160px,calc(100% - 56px));margin:0 auto 46px;display:flex;align-items:center;gap:24px;padding:28px 36px;border-radius:32px;background:var(--sage)}
+.visit-icon{width:60px;height:50px;color:var(--green);flex:none}
+.visit-banner div{flex:1}.visit-banner p{margin:0}.visit-banner .button{flex:none}
+@media(max-width:900px){.contact-strip-inner,.contact-layout,.visit-banner{width:calc(100% - 36px)}.contact-strip-inner{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 0}.contact-fact:nth-child(2){border-right:0}.contact-fact:nth-child(3){padding-left:0}.contact-layout{gap:18px}.form-panel,.faq-panel{padding:20px}}
+@media(max-width:650px){.contact-strip-inner,.contact-layout,.visit-banner{width:calc(100% - 30px)}.contact-strip-inner{padding:22px 0;gap:18px 0}.contact-fact{gap:8px;padding:0 10px}.fact-icon{width:38px;height:38px}.fact-icon svg{width:20px;height:20px}.contact-fact h2,.contact-fact p{font-size:11px}.contact-layout{grid-template-columns:1fr;margin:26px auto}.visit-banner{flex-wrap:wrap;gap:14px;padding:24px;margin-bottom:34px}.visit-icon{width:42px;height:38px}.visit-banner div{flex:1 1 calc(100% - 60px)}.visit-banner .button{margin-left:56px}.form-panel h2,.contact-side h2,.visit-banner h2{font-size:23px}}

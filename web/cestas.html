@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f5d3a">
+  <meta name="description" content="Compara las cestas de Huerta Serrana: contenido, precio mensual y frecuencia de entrega.">
+  <title>Compara nuestras cestas | Huerta Serrana S. Coop.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/cestas.css">
+  <link rel="stylesheet" href="assets/css/general.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <svg class="icon-definitions" aria-hidden="true" focusable="false">
+    <symbol id="icon-sprout" viewBox="0 0 48 36"><path d="M24 32V18M24 24C15 24 11 18 11 10c8 0 13 4 13 14ZM24 19c0-8 5-13 13-13 0 8-4 14-13 15Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Huerta Serrana, inicio">
+        <svg class="brand-mark" viewBox="0 0 84 62" aria-hidden="true">
+          <path d="M42 7c-8 0-13-5-13-5 1 10 6 15 13 15S54 12 55 2c0 0-5 5-13 5Z" fill="currentColor"/>
+          <path d="M42 19v8M8 43c12-12 24-12 34-3 10-9 22-9 34 3M13 52c10-6 20-6 29 0 9-6 19-6 29 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M23 35c7-7 13-8 19-4 6-4 12-3 19 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-type"><strong>Huerta<br>Serrana</strong><small>S. Coop.</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a class="active" href="cestas.html" aria-current="page">Cestas</a><a href="productores.html">Productores</a><a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-trigger" type="button" id="cartOpen" aria-label="Abrir carrito">
+          <svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg><span class="cart-trigger-label">Mi carrito</span>
+          <b id="cartCount" class="cart-count">0</b>
+        </button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil" hidden>
+      <a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="cestas.html" aria-current="page">Cestas</a><a href="productores.html">Productores</a><a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-copy">
+      <p class="eyebrow">DE LA HUERTA A TU MESA</p>
+      <h1 id="heroTitle">Una cesta para cada hogar</h1>
+      <p class="hero-lead">Compara nuestras tres cestas y descubre cuál se adapta mejor a ti.</p>
+      <a class="button button-green" href="#comparativa">Comparar cestas <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="hero-photo" role="img" aria-label="Huerta de la Sierra Norte"></div>
+  </section>
+
+  <main class="comparison-page" id="contenido">
+    <section id="comparativa" aria-labelledby="comparisonTitle">
+      <div class="comparison-intro">
+        <span class="intro-icon" aria-hidden="true"><svg class="sprout-icon"><use href="#icon-sprout"></use></svg></span>
+        <p class="comparison-eyebrow">TRES CESTAS, UNA MISMA HUERTA</p>
+        <h2 id="comparisonTitle">Encuentra tu cesta</h2>
+        <p>Compara el contenido, el precio mensual y la frecuencia de entrega.</p>
+        <p class="demo-note">Carrito de demostración: no se tramitan pedidos ni suscripciones.</p>
+      </div>
+      <p class="scroll-hint" id="scrollHint">Desliza la tabla para ver las tres cestas <span aria-hidden="true">→</span></p>
+      <div class="comparison-scroll" tabindex="0" role="region" aria-label="Tabla comparativa de cestas" aria-describedby="comparisonNote scrollHint">
+        <table class="comparison-table">
+          <caption>Comparativa de las tres cestas de Huerta Serrana</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="feature-heading">Compara<br><span>nuestras cestas</span></th>
+              <th scope="col" id="pareja"><img src="assets/home/cesta-clasica.jpg" alt=""><span class="basket-name">Cesta Pareja</span><span class="basket-price">38 € <small>/ mes</small></span></th>
+              <th scope="col" id="familia"><img src="assets/home/cesta-familiar.jpg" alt=""><span class="basket-name">Cesta Familia</span><span class="basket-price">62 € <small>/ mes</small></span></th>
+              <th scope="col" id="despensa"><img src="assets/catalogo/mermelada-higo.jpg" alt=""><span class="basket-name">Cesta Despensa</span><span class="basket-price">45 € <small>/ mes</small></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="info-row"><th scope="row"><span class="feature-icon" aria-hidden="true">♧</span> Personas</th><td>1–2 personas</td><td>3–4 personas</td><td>2–4 personas</td></tr>
+            <tr class="info-row"><th scope="row"><span class="feature-icon" aria-hidden="true">◷</span> Entrega</th><td>Semanal</td><td>Semanal</td><td>Quincenal</td></tr>
+            <tr class="section-row"><td colspan="4">¿Qué incluye cada cesta? <span>Una muestra de productos</span></td></tr>
+            <tr><th scope="row"><span class="product-label"><img src="assets/catalogo/tomate.jpg" alt="" loading="lazy">Verdura y fruta</span></th><td><span class="check" aria-hidden="true">✓</span> De temporada</td><td><span class="check" aria-hidden="true">✓</span> De temporada</td><td class="not-specified">No indicado</td></tr>
+            <tr><th scope="row"><span class="product-label"><img src="assets/catalogo/pan-centeno.jpg" alt="" loading="lazy">Pan</span></th><td><span class="check" aria-hidden="true">✓</span> 1 pan</td><td><span class="check" aria-hidden="true">✓</span> 2 panes</td><td><span class="check" aria-hidden="true">✓</span> 1 pan</td></tr>
+            <tr><th scope="row"><span class="product-label"><img src="assets/catalogo/huevos-camperos.jpg" alt="" loading="lazy">Huevos</span></th><td><span class="check" aria-hidden="true">✓</span> 1 docena</td><td><span class="check" aria-hidden="true">✓</span> 1 docena</td><td class="not-specified">No indicado</td></tr>
+            <tr><th scope="row"><span class="product-label"><img src="assets/catalogo/queso-curado-cabra.jpg" alt="" loading="lazy">Queso y yogures</span></th><td class="not-specified">No indicado</td><td><span class="check" aria-hidden="true">✓</span> 1 queso o yogures</td><td><span class="check" aria-hidden="true">✓</span> Queso curado</td></tr>
+            <tr><th scope="row"><span class="product-label"><img src="assets/catalogo/miel-romero.jpg" alt="" loading="lazy">Miel y mermelada</span></th><td class="not-specified">No indicado</td><td class="not-specified">No indicado</td><td><span class="check" aria-hidden="true">✓</span> Miel y mermelada</td></tr>
+            <tr><th scope="row"><span class="product-label"><img src="assets/catalogo/magdalenas-aceite.jpg" alt="" loading="lazy">Magdalenas</span></th><td class="not-specified">No indicado</td><td class="not-specified">No indicado</td><td><span class="check" aria-hidden="true">✓</span> Magdalenas</td></tr>
+            <tr class="basket-actions">
+              <th scope="row">Tu elección</th>
+              <td><button class="button button-terra" type="button" data-add-basket="C1" aria-label="Añadir Cesta Pareja al carrito de prueba" disabled>Añadir al carrito</button></td>
+              <td><button class="button button-terra" type="button" data-add-basket="C2" aria-label="Añadir Cesta Familia al carrito de prueba" disabled>Añadir al carrito</button></td>
+              <td><button class="button button-terra" type="button" data-add-basket="C3" aria-label="Añadir Cesta Despensa al carrito de prueba" disabled>Añadir al carrito</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="comparison-note" id="comparisonNote">«No indicado» significa que el producto no figura en la descripción de esa cesta.</p>
+      <p class="demo-note" id="basketActionStatus">Para añadir cestas, el carrito de prueba debe estar disponible. Comprueba JavaScript y recarga la página.</p>
+      <div class="comparison-action">
+        <div><h2>¿Quieres saber más?</h2><p>Descubre los detalles de cada cesta en Inicio.</p></div>
+        <a class="button button-green" href="index.html#cestas">Ver las cestas <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div class="footer-landscape" aria-hidden="true"><img src="assets/home/sierra-footer.png" alt="" width="2234" height="368"></div>
+    <div class="footer-bottom"><div class="footer-inner">
+      <a class="brand footer-brand" href="index.html" aria-label="Huerta Serrana, volver al inicio">
+        <svg class="brand-mark" viewBox="0 0 84 62" aria-hidden="true"><path d="M42 7c-8 0-13-5-13-5 1 10 6 15 13 15S54 12 55 2c0 0-5 5-13 5Z" fill="currentColor"/><path d="M42 19v8M8 43c12-12 24-12 34-3 10-9 22-9 34 3M13 52c10-6 20-6 29 0 9-6 19-6 29 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M23 35c7-7 13-8 19-4 6-4 12-3 19 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <span class="brand-type"><strong>Huerta<br>Serrana</strong><small>S. Coop.</small></span>
+      </a>
+      <div class="footer-links"><a href="#contacto">Aviso legal</a><span>|</span><a href="#contacto">Privacidad</a><span>|</span><a href="contacto.html">Contacto</a></div>
+      <div class="social-links" aria-label="Redes sociales"><a href="#contacto" aria-label="Instagram">◎</a><a href="#contacto" aria-label="Facebook">f</a><a href="#contacto" aria-label="YouTube">▶</a></div>
+    </div></div>
+  </footer>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true" inert>
+    <div class="drawer-header"><h2 id="cartTitle"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg> Tu carrito</h2><button id="cartClose" class="close-button" aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Todavía no has añadido productos ni cestas.</p></div>
+    <div class="cart-summary">
+      <div class="total-line"><strong>Total estimado</strong><span>—</span></div>
+      <p class="price-disclaimer">El total queda pendiente de concretar impuestos y costes de envío.</p>
+      <a class="button button-green checkout-button" href="pedido.html">Revisar pedido <span>→</span></a>
+      <button class="button button-outline continue-shopping" id="continueShopping">← Seguir comprando</button>
+    </div>
+    <div class="delivery-note"><svg class="sprout-icon" aria-hidden="true" focusable="false"><use href="#icon-sprout"></use></svg><div><strong>Envío en Madrid y sierra</strong><small>Los jueves y sábados</small></div></div>
+    <span class="drawer-leaf" aria-hidden="true"></span>
+  </aside>
+  <script src="assets/js/general.js"></script>
+  <script src="assets/js/cestas.js"></script>
+</body>
+</html>

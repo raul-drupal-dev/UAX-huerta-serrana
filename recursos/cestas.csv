@@ -1,0 +1,4 @@
+id;nombre;precio_mes_eur;personas;contenido;entrega
+C1;Cesta Pareja;38;1-2;Verdura y fruta de temporada, 1 pan, 1 huevos;Semanal
+C2;Cesta Familia;62;3-4;Verdura y fruta de temporada, 2 panes, 1 docena de huevos, 1 queso o yogures;Semanal
+C3;Cesta Despensa;45;2-4;Miel, mermelada, queso curado, magdalenas y 1 pan;Quincenal

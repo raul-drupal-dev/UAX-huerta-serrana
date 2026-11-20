@@ -1,0 +1,8 @@
+token_css;nombre;hex;uso
+--color-primario;Verde sierra;#2F5D3A;Cabecera, botones, enlaces
+--color-fondo;Crema;#FAF6EC;Fondo de página
+--color-acento;Tierra;#B5532A;Llamadas a la acción secundarias
+--color-texto;Tinta;#1F2A22;Texto principal
+--color-superficie;Arena;#E8E2D2;Tarjetas y separadores
+--color-destacado;Miel;#F2B134;Solo decorativo o con texto Tinta encima
+--color-apagado;Gris musgo;#8A8F86;Ejemplo de color NO apto para texto pequeño

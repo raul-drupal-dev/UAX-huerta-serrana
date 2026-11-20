@@ -1,0 +1,64 @@
+.producers-page{width:min(1160px,calc(100% - 56px));margin:30px auto 44px}
+.section-heading{text-align:center}
+.section-heading h2{display:flex;align-items:center;justify-content:center;gap:22px;font-size:clamp(23px,2.4vw,32px);line-height:1.15;margin:0}
+.section-heading h2:before,.section-heading h2:after{content:"";width:110px;height:1px;background:#d3a65b;flex:none}
+.section-heading p{font-size:15px;margin:12px 0 0}
+.image-note{text-align:center;font-size:12px;margin:14px 0;color:var(--green-dark)}
+.producer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 26px}
+.producer-card{display:grid;grid-template-columns:44% minmax(0,1fr);overflow:hidden;border:1px solid #e6dcc7;border-radius:14px;background:#f8f0df;box-shadow:0 2px 4px rgba(70,54,24,.08)}
+.producer-card>img{display:block;width:100%;height:100%;min-height:230px;object-fit:cover}
+.producer-info{position:relative;isolation:isolate;padding:23px 24px;min-width:0}
+.producer-info:after{content:"";position:absolute;z-index:-1;right:-16px;bottom:15px;width:75px;height:125px;background:url('../huerta-serrana-home/assets/espiga-decorativa.svg') center/contain no-repeat;opacity:.38;pointer-events:none}
+.producer-info h3{font-size:21px;line-height:1.15;margin:0 0 10px}
+.producer-info p{line-height:1.45;margin:0 0 16px}
+.producer-info .location{color:var(--green-dark);font-size:13px;font-weight:600}
+.location:before{content:"\2022";color:#806d3b;margin-right:8px}
+.producer-info details{margin-top:22px}
+.producer-info summary{display:inline-flex;align-items:center;gap:12px;min-height:40px;padding:8px 15px;border:1px solid var(--green);border-radius:24px;color:var(--green-dark);font-size:12px;font-weight:700;cursor:pointer;list-style:none}
+.producer-info summary::-webkit-details-marker{display:none}
+.producer-info summary:focus-visible{outline:3px solid #d89a30;outline-offset:3px}
+.producer-info details p{margin:12px 0 0;font-size:13px}
+.story-open{overflow:hidden}
+.story-dialog{position:fixed;inset:0;width:min(900px,calc(100% - 32px));max-width:none;max-height:calc(100% - 32px);padding:0;border:1px solid var(--line);border-radius:24px;background:var(--cream);color:var(--ink);box-shadow:0 24px 70px rgba(31,42,34,.3);overflow:auto}
+.story-dialog--queseria{--story-accent:#eee4ce}
+.story-dialog--apiarios{--story-accent:#f5e6bf}
+.story-dialog--horno{--story-accent:#eedfd1}
+.story-dialog::backdrop{background:rgba(20,35,25,.75)}
+.story-close{position:absolute;z-index:2;top:16px;right:16px;display:grid;place-items:center;width:42px;height:42px;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--cream);color:var(--green-dark);font-size:28px;line-height:1}
+.story-close:hover{background:var(--sand)}
+.story-layout{display:grid;grid-template-columns:37% minmax(0,1fr);min-height:100%}
+.story-visual{position:relative;min-height:100%;overflow:hidden;background:var(--green-dark)}
+.story-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(20,35,25,.86) 100%);pointer-events:none}
+.story-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.story-visual-caption{position:absolute;z-index:1;right:28px;bottom:32px;left:28px;color:#fff}
+.story-visual-caption span{font-size:10px;font-weight:700;letter-spacing:.14em}
+.story-visual-caption p{font:clamp(23px,2.4vw,32px)/1.15 var(--serif);margin:12px 0 0}
+.story-content{position:relative;isolation:isolate;padding:42px clamp(26px,4vw,48px) 36px}
+.story-content:after{content:"";position:absolute;z-index:-1;right:8px;bottom:8px;width:95px;height:145px;background:url('../huerta-serrana-home/assets/espiga-decorativa.svg') center/contain no-repeat;opacity:.22;pointer-events:none}
+.story-kicker{display:flex;align-items:center;gap:7px;margin:0 45px 10px 0;color:var(--green-dark);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.story-kicker .sprout-icon{width:24px}
+.story-content h2{font-size:clamp(30px,3vw,40px);line-height:1.08;margin:0 40px 10px 0}
+.story-intro{font-size:15px;line-height:1.5;margin:0 0 10px}
+.story-note{font-size:12px;line-height:1.45;margin:0;color:var(--green-dark)}
+.story-path{list-style:none;padding:0;margin:28px 0 22px}
+.story-path li{position:relative;display:grid;grid-template-columns:38px minmax(0,1fr);gap:16px;padding:0 0 24px}
+.story-path li:not(:last-child):before{content:"";position:absolute;top:38px;bottom:0;left:18px;border-left:2px dashed #9aa984}
+.story-path li:last-child{padding-bottom:0}
+.story-step{display:grid;place-items:center;width:38px;height:38px;border:1px solid #bac8a9;border-radius:50%;background:var(--story-accent,var(--sage));color:var(--green-dark);font-size:11px;font-weight:700}
+.story-step svg{width:24px;height:24px}
+.story-era{margin:0 0 5px;color:var(--green-dark);font-size:10px;font-weight:700;letter-spacing:.08em}
+.story-path h3{margin:0 0 6px;font-size:19px;line-height:1.2}
+.story-path li div>p:last-child{margin:0;font-size:13px;line-height:1.55}
+.story-fact{display:flex;align-items:flex-start;gap:10px;padding:14px 16px;border-radius:14px;background:var(--story-accent,var(--sage));color:var(--green-dark)}
+.story-fact p{margin:0;font-size:12px;line-height:1.5}
+.cooperative{position:relative;display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:32px;margin-top:42px;padding:30px 38px;border-radius:30px;background:var(--sage)}
+.cooperative-copy h2{font-size:clamp(24px,2.4vw,32px);line-height:1.05;margin:0 0 12px}
+.cooperative-copy p{line-height:1.5;margin:0 0 16px}
+.cooperative-values{display:grid;grid-template-columns:repeat(3,1fr);align-self:stretch;list-style:none;padding:0;margin:0;border-left:1px solid #b6bd93}
+.cooperative-values li{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;text-align:center;line-height:1.4;padding:12px;border-right:1px solid #d3d9b2}
+.cooperative-values li:last-child{border-right:0}
+.cooperative-values svg{width:44px;height:44px;color:var(--green)}
+@media(max-width:900px){.producers-page{width:calc(100% - 36px)}.producer-grid{gap:18px}.producer-card{grid-template-columns:40% minmax(0,1fr)}.producer-info{padding:18px}.cooperative{gap:20px;padding:26px}}
+@media(max-width:650px){.producers-page{width:calc(100% - 30px);margin:26px auto 34px}.section-heading h2{gap:10px}.section-heading h2:before,.section-heading h2:after{width:28px}.producer-grid{grid-template-columns:1fr}.producer-card>img{min-height:210px}.cooperative{grid-template-columns:1fr;gap:22px;padding:26px 22px}.cooperative-values{border-left:0;border-top:1px solid #b6bd93;padding-top:12px}.cooperative-values li{padding:10px 5px;font-size:12px}}
+@media(max-width:650px){.story-layout{grid-template-columns:1fr}.story-visual{min-height:180px}.story-visual img{object-position:center 38%}.story-visual-caption{right:22px;bottom:20px;left:22px}.story-content{padding:28px 24px}.story-content h2{margin-right:0}.story-kicker{margin-right:0}.story-path{margin-top:24px}}
+@media(max-width:390px){.producer-card{grid-template-columns:38% minmax(0,1fr)}.producer-info{padding:16px 13px}.producer-info h3{font-size:19px}}
