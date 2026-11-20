@@ -31,7 +31,7 @@ const cartTotals = entries => entries.reduce((totals, [id, quantity]) => {
   return totals;
 }, { products: 0, baskets: 0 });
 const productImageMarkup = (product, className) => product.image || product.imagePath
-  ? `<img class="${className}" src="assets/${product.imagePath || `catalogo/${product.image}`}" alt="" width="66" height="58">`
+  ? `<img class="${className}" src="assets/${product.imagePath || `catalogo/${product.image}`}" alt="" width="66" height="58" loading="lazy">`
   : `<span class="${className} product-placeholder" aria-hidden="true"></span>`;
 let cart = JSON.parse(localStorage.getItem(cartKey) || "{}");
 const drawer = document.getElementById("cartDrawer");
