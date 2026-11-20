@@ -19,7 +19,7 @@ function renderProducts() {
         <p class="producer">${product.producer}</p>
         <p class="allergen-note">Alérgenos declarados: ${allergens}</p>
         <div class="product-actions">
-          <div class="quantity" aria-label="Cantidad de ${product.name}">
+          <div class="quantity" role="group" aria-label="Cantidad de ${product.name}">
             <button type="button" class="qty-minus" aria-label="Reducir ${product.name}">−</button>
             <output>1</output>
             <button type="button" class="qty-plus" aria-label="Aumentar ${product.name}">＋</button>

@@ -35,7 +35,7 @@ function renderOrder() {
   } else {
     orderItems.innerHTML = entries.map(([id, quantity]) => {
       const product = cartItem(id);
-      return `<article class="order-item">${productImageMarkup(product, "order-item-image")}<div><h3>${product.name}</h3><p>${formatPrice(product.priceCents)} / ${product.unit}</p></div><div class="quantity" aria-label="Cantidad de ${product.name}"><button type="button" data-order-minus="${id}" aria-label="Reducir ${product.name}">−</button><output>${quantity}</output><button type="button" data-order-plus="${id}" aria-label="Aumentar ${product.name}">＋</button></div><button type="button" class="order-remove" data-order-remove="${id}" aria-label="Eliminar ${product.name}">×</button></article>`;
+      return `<article class="order-item">${productImageMarkup(product, "order-item-image")}<div><h3>${product.name}</h3><p>${formatPrice(product.priceCents)} / ${product.unit}</p></div><div class="quantity" role="group" aria-label="Cantidad de ${product.name}"><button type="button" data-order-minus="${id}" aria-label="Reducir ${product.name}">−</button><output>${quantity}</output><button type="button" data-order-plus="${id}" aria-label="Aumentar ${product.name}">＋</button></div><button type="button" class="order-remove" data-order-remove="${id}" aria-label="Eliminar ${product.name}">×</button></article>`;
     }).join("");
   }
   const list = document.getElementById("confirmItems");
